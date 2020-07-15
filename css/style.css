@@ -12,7 +12,7 @@ body {
   background-position: center;
 }
 .cover-small {
-  heigh: 200px;
+  /*heigh: 200px;*/
   background-blend-mode: normal;
 }
 .card {
@@ -20,12 +20,14 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+/*
 .card-title {
   min-heigh: 8rem;
 }
 .card-text {
   min-heigh: 10rem;
 }
+*/
 .navbar {
   position: fixed;
   top: 0;
