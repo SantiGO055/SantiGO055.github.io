@@ -104,44 +104,44 @@
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-        <script type="text/javascript" src="js/forms.js">clearForm(app);</script>
+        
         
           <script>
-            // (function(){
-            //     emailjs.init("user_qOzALb8QuxtW7Iy9808vc");
-            //  })();
-            // const vue = new Vue({
-            //     el: '#app',
-            //     data(){
-            //         return {
-            //             from_name: '',
-            //             from_email: '',
-            //             message: '',
-            //             subject: '',
-            //         }
-            //     },
-            //     methods: {
-            //         enviar(){
-            //             let data = {
-            //                 from_name: this.from_name,
-            //                 from_email: this.from_email,
-            //                 message: this.message,
-            //                 subject: this.subject,
-            //             };
+            (function(){
+                emailjs.init("user_qOzALb8QuxtW7Iy9808vc");
+             })();
+            const vue = new Vue({
+                el: '#app',
+                data(){
+                    return {
+                        from_name: '',
+                        from_email: '',
+                        message: '',
+                        subject: '',
+                    }
+                },
+                methods: {
+                    enviar(){
+                        let data = {
+                            from_name: this.from_name,
+                            from_email: this.from_email,
+                            message: this.message,
+                            subject: this.subject,
+                        };
                         
-            //             emailjs.send("gmail","form-contacto", data)
-            //             .then(function(response) {
-            //                 if(response.text === 'OK'){
-            //                     alert('El correo se ha enviado de forma exitosa');
-            //                 }
-            //                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-            //             }, function(err) {
-            //                 alert('Ocurrió un problema al enviar el correo');
-            //                console.log("FAILED. error=", err);
-            //             });
-            //         }
-            //     }
-            // });
+                        emailjs.send("gmail","form-contacto", data)
+                        .then(function(response) {
+                            if(response.text === 'OK'){
+                                alert('El correo se ha enviado de forma exitosa');
+                            }
+                           console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                        }, function(err) {
+                            alert('Ocurrió un problema al enviar el correo');
+                           console.log("FAILED. error=", err);
+                        });
+                    }
+                }
+            });
         </script>
         
     </body>
