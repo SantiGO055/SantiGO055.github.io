@@ -44,42 +44,64 @@ function show(frm)
 show(form);
 */
 
-(function(){
-    emailjs.init("user_qOzALb8QuxtW7Iy9808vc");
- })();
-const vue = new Vue({
-    el: '#app',
-    data(){
-        return {
-            from_name: '',
-            from_email: '',
-            message: '',
-            subject: '',
-        }
-    },
-    methods: {
-        enviar(){
-            let data = {
-                from_name: this.from_name,
-                from_email: this.from_email,
-                message: this.message,
-                subject: this.subject,
-            };
-            
-            emailjs.send("gmail","form-contacto", data)
-            .then(function(response) {
-                if(response.text === 'OK'){
-                    alert('El correo se ha enviado de forma exitosa');
-                }
-               console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-            }, function(err) {
-                alert('Ocurrió un problema al enviar el correo');
-               console.log("FAILED. error=", err);
-            });
-            
-        }
-    }
+var myform = $("form#myform");
+myform.submit(function(event) {
+  event.preventDefault();
+
+  // Change to your service ID, or keep using the default service
+  var service_id = "default_service";
+  var template_id = "form-contacto";
+
+  myform.find("button").text("Sending...");
+  emailjs.sendForm(service_id, template_id, myform[0])
+    .then(function() {
+      alert("Sent!");
+      myform.find("button").text("Send");
+    }, function(err) {
+      alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+      myform.find("button").text("Send");
+    });
+  return false;
 });
+
+
+// (function(){
+//     emailjs.init("user_qOzALb8QuxtW7Iy9808vc");
+//  })();
+// const vue = new Vue({
+//     el: '#app',
+//     data(){
+//         return {
+//             from_name: '',
+//             from_email: '',
+//             message: '',
+//             subject: '',
+//         }
+//     },
+//     methods: {
+//         enviar(){
+//             let data = {
+//                 from_name: this.from_name,
+//                 from_email: this.from_email,
+//                 message: this.message,
+//                 subject: this.subject,
+//             };
+            
+//             emailjs.send("gmail","form-contacto", data)
+//             .then(function(response) {
+//                 if(response.text === 'OK'){
+//                     alert('El correo se ha enviado de forma exitosa');
+//                     document.getElementById("myForm").reset;
+//                 }
+//                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+//             }, function(err) {
+//                 alert('Ocurrió un problema al enviar el correo');
+//                console.log("FAILED. error=", err);
+//             });
+            
+//         }
+//     }
+// });
 
 
 /*
