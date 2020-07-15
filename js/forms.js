@@ -69,6 +69,7 @@ const vue = new Vue({
             .then(function(response) {
                 if(response.text === 'OK'){
                     $('#apps').val("");
+                    
                     alert('El correo se ha enviado de forma exitosa');
                 }
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
