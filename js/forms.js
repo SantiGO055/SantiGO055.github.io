@@ -24,7 +24,7 @@ const vue = new Vue({
             .then(function(response) {
                 if(response.text === 'OK'){
                     alert('El correo se ha enviado de forma exitosa');
-                    clearForm(app);
+                    clearForm(this.el);
                 }
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
             }, function(err) {
