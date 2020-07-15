@@ -1,5 +1,5 @@
 
-var form  = new Array();
+/*var form  = new Array();
 
 form.push('<div id="app" style="padding-top: 6rem;" >');
 form.push('<div class="container align-items-center">');
@@ -42,6 +42,7 @@ function show(frm)
 }
 
 show(form);
+*/
 
 (function(){
     emailjs.init("user_qOzALb8QuxtW7Iy9808vc");
@@ -68,29 +69,19 @@ const vue = new Vue({
             emailjs.send("gmail","form-contacto", data)
             .then(function(response) {
                 if(response.text === 'OK'){
-                    $('#apps').val("");
-                    
                     alert('El correo se ha enviado de forma exitosa');
+                    //document.getElementById("myForm").reset;
                 }
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
             }, function(err) {
                 alert('Ocurrió un problema al enviar el correo');
+                //document.getElementById("myForm").reset;
                console.log("FAILED. error=", err);
             });
+            
         }
     }
 });
-
-
-
-        
-
-function cleanForm(frm){
-    var inputs = document.frm.getElementsByTagName("input");
-    for(var i=0;i<inputs.length;i++){
-    inputs[i].value = "";
-    }
-}
 
 
 /*
