@@ -23,6 +23,8 @@ const vue = new Vue({
             emailjs.send("gmail","form-contacto", data)
             .then(function(response) {
                 if(response.text === 'OK'){
+                    this.vue.reset();
+                    alert('prueba de si se reseteo');
                     alert('El correo se ha enviado de forma exitosa');
                 }
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
