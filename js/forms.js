@@ -70,12 +70,10 @@ const vue = new Vue({
             .then(function(response) {
                 if(response.text === 'OK'){
                     alert('El correo se ha enviado de forma exitosa');
-                    //document.getElementById("myForm").reset;
                 }
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
             }, function(err) {
                 alert('Ocurrió un problema al enviar el correo');
-                //document.getElementById("myForm").reset;
                console.log("FAILED. error=", err);
             });
             
