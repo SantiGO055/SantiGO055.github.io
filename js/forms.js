@@ -1,4 +1,4 @@
-
+//#region implemento html
 /*var form  = new Array();
 
 form.push('<div id="app" style="padding-top: 6rem;" >');
@@ -43,7 +43,9 @@ function show(frm)
 
 show(form);
 */
+//#endregion
 
+//#region email js no usado
 // var myform = $("form#myform");
 // myform.submit(function(event) {
 //   event.preventDefault();
@@ -63,7 +65,7 @@ show(form);
 //     });
 //   return false;
 // });
-
+//#endregion
 
 (function(){
     emailjs.init("user_qOzALb8QuxtW7Iy9808vc");
@@ -91,18 +93,15 @@ const vue = new Vue({
             .then(function(response) {
                 if(response.text === 'OK'){
                     alert('El correo se ha enviado de forma exitosa');
-                    document.getElementById("myForm").reset;
                 }
                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
             }, function(err) {
                 alert('Ocurrió un problema al enviar el correo');
                console.log("FAILED. error=", err);
             });
-            
         }
     }
 });
-
 
 /*
 function clearForm(oForm) {
