@@ -40,17 +40,10 @@ function cambiarModoOscuro() {
     var tarjetas = document.getElementsByClassName("card");
     var tarjetasBody = document.getElementsByClassName("card-body");
 
-    
-    //console.log(tarjetas);
-    
-
-
     var tarjeta = document.querySelector('.card');
+
     var tarjetaBody = document.querySelector('.card-body');
 
-    
-    
-    
     nav.classList.toggle("navBarOscuro");
     if(tarjetas != null){
         for(var i = 0; i < tarjetas.length;i++){
@@ -62,7 +55,6 @@ function cambiarModoOscuro() {
 
     }
     cuerpoweb.classList.toggle("oscuro"); 
-
 
     if(cuerpoweb.classList == ("oscuro")){
         console.log("entre en modo oscuro");
