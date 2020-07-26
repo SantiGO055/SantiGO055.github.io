@@ -35,7 +35,6 @@ navigation.push(e1+e2+e3+e4+e5+e6+e7+e8+e9+e10+e11);
 // navigation.push(e10);
 // navigation.push(e11);
 function cambiarModoOscuro() { 
-    
     var cuerpoweb = document.body; 
     var nav = document.querySelector(".navbar");
     cuerpoweb.classList.toggle("oscuro"); 
@@ -58,11 +57,6 @@ function cambiarModoOscuro() {
         nav.innerHTML = e1+e2+e3+e4+e5+e6+e7+e8+e9+e10+e11;
     }
 }
-
-
-
-
-
 
 
 // var navBar = document.getElementById("menu");
