@@ -37,12 +37,37 @@ navigation.push(e1+e2+e3+e4+e5+e6+e7+e8+e9+botonDark+e11);
 function cambiarModoOscuro() { 
     var cuerpoweb = document.body; 
     var nav = document.querySelector(".navbar");
-    cuerpoweb.classList.toggle("oscuro"); 
+    var tarjetas = document.getElementsByClassName("card");
+    var tarjetasBody = document.getElementsByClassName("card-body");
+
+    
+    //console.log(tarjetas);
+    
+
+
+    var tarjeta = document.querySelector('.card');
+    var tarjetaBody = document.querySelector('.card-body');
+
+    
+    
+    
     nav.classList.toggle("navBarOscuro");
+    if(tarjetas != null){
+        for(var i = 0; i < tarjetas.length;i++){
+            tarjetas[i].classList.toggle("cardOscuro");
+            tarjetasBody[i].classList.toggle("cardBodyOscuro")
+            console.log(tarjetas[i]);
+            console.log(tarjetasBody[i]);
+        }
+
+    }
+    cuerpoweb.classList.toggle("oscuro"); 
+
+
     if(cuerpoweb.classList == ("oscuro")){
         console.log("entre en modo oscuro");
+
         var image = document.querySelector(".logoVP");
-        var imageBlanco = document.querySelector(".logoVP");
         if(image!=null){
             image.parentNode.removeChild(image);
             //<a href="index.html"><img class="logoVPBlanco" src="https://cdn.glitch.com/d055f014-bb8e-417c-99ac-41aa61652365%2FlogoBlanco.png?v=1595784297966" width="100" height="10" class="d-inline-block align-top" alt="" /></a>
