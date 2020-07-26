@@ -21,9 +21,9 @@ var e6 = '<li class="nav-item active"><a class="nav-link" href="index.html">Inic
 var e7 = '<li class="nav-item"><a class="nav-link" href="contenido.html">Contenido</a></li>';
 var e8 = '<li class="nav-item"><a class="nav-link" href="acercade.html">Acerca de</a></li>';
 var e9 = '<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>';
-var e10 = '<li class="nav-item"> <button type="button" class="btn switch" id="switch" onclick=cambiarModoOscuro()>Oscuro / Claro</button></li>';
+var botonDark = '<li class="nav-item"> <button type="button" class="btn btn-dark switch" id="switch" onclick=cambiarModoOscuro()>Modo Oscuro</button></li>';
 var e11 = '</ul></nav>';
-navigation.push(e1+e2+e3+e4+e5+e6+e7+e8+e9+e10+e11);
+navigation.push(e1+e2+e3+e4+e5+e6+e7+e8+e9+botonDark+e11);
 // navigation.push(e2);
 // navigation.push(e3);
 // navigation.push(e4);
@@ -47,14 +47,16 @@ function cambiarModoOscuro() {
             image.parentNode.removeChild(image);
             //<a href="index.html"><img class="logoVPBlanco" src="https://cdn.glitch.com/d055f014-bb8e-417c-99ac-41aa61652365%2FlogoBlanco.png?v=1595784297966" width="100" height="10" class="d-inline-block align-top" alt="" /></a>
             e4 = '<a href="index.html"><img class="logoVPBlanco" src="https://cdn.glitch.com/d055f014-bb8e-417c-99ac-41aa61652365%2FlogoBlanco.png?v=1595784297966" width="100" height="10" class="d-inline-block align-top" alt="" /></a>';
-            nav.innerHTML = e1+e2+e3+e4+e5+e6+e7+e8+e9+e10+e11;
+            botonDark = '<li class="nav-item"> <button type="button" class="btn btn-light switch" id="switch" onclick=cambiarModoOscuro()>Modo Claro</button></li>';
+            nav.innerHTML = e1+e2+e3+e4+e5+e6+e7+e8+e9+botonDark+e11;
         }
         
     }
     else{
         console.log("sali del modo oscuro");
         e4 = '<a href="index.html"><img class="logoVP" src="https://cdn.glitch.com/d055f014-bb8e-417c-99ac-41aa61652365%2Flogo%20vp.png?v=1584467232730" width="100" height="10" class="d-inline-block align-top" alt="" /></a>';
-        nav.innerHTML = e1+e2+e3+e4+e5+e6+e7+e8+e9+e10+e11;
+        var botonDark = '<li class="nav-item"> <button type="button" class="btn btn-dark switch" id="switch" onclick=cambiarModoOscuro()>Modo Oscuro</button></li>';
+        nav.innerHTML = e1+e2+e3+e4+e5+e6+e7+e8+e9+botonDark+e11;
     }
 }
 
