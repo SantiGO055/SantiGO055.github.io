@@ -42,7 +42,7 @@ body{
     transition:.40s;
     background-color: #1f1f1f; 
     color: #f1eded; 
-    
+    border-bottom: grey;
     
 }
 .navBarOscuro{
@@ -64,6 +64,52 @@ body{
 .cardBodyOscuro{
   background-color: #1f1f1f; 
 }
+.spotify{
+  z-index: 999;
+  width: 100%;
+}
+.slider{
+  overflow-x:hidden;
+  
+}
+.slider-container{
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 0rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transform: translateX(0%);
+  animation: slider 10s infinite;
+}
+
+.image-container{
+  width: 100%;
+  padding-top: 56.25%;
+  background-size: cover;
+  background-position: initial;
+  flex-shrink: 0;
+}
+
+
+@keyframes slider{
+  0%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-100%);
+  }
+  45%{
+    transform: translateX(-100%);
+  }
+
+  100%{
+    
+  }
+}
+
 
 /* CSS para la animación y localización de los DIV de cookies */
  
