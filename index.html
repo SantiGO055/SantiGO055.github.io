@@ -1,58 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- SCRIPT CONTROL DE COOKIES -->
+    <script type="text/javascript">
+      function controlcookies() {
+          // si variable no existe se crea (al clicar en Aceptar)
+          localStorage.controlcookie = (localStorage.controlcookie || 0);
+          localStorage.controlcookie++; // incrementamos cuenta de la cookie
+          cookie1.style.display='none'; // Esconde la política de cookies
+      }
+    </script>
+
     <title>VuelvaPronto</title>
-    <!--<link
-      rel="shortcut icon"
-      href="https://cdn.glitch.com/d055f014-bb8e-417c-99ac-41aa61652365%2Fvploguito.png?v=1584481131693"
-    /> -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- import the webpage's stylesheet -->
-    <!--<link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
-      rel="stylesheet"
-    />
-    -->
   </head>
   <body>
+    <div class="cookiesms" id="cookie1">
+      Esta web utiliza cookies, puedes ver nuestra  <a href="tu-url-donde-explicas-la-politica-de-cookies">la política de cookies, aquí</a> 
+      Si continuas navegando estás aceptándola
+      <button onclick="controlcookies()">Aceptar</button>
+      <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Política de cookies + </div>
+      </div>
+      <script type="text/javascript">
+      if (localStorage.controlcookie>0){ 
+      document.getElementById('cookie1').style.bottom = '-50px';
+      }
+      </script>
     <header>
       <script type="text/javascript" src="js/menu.js"></script>
-      <!-- Comento barra de navegacion para implementarla en funcion .js -->
-      <!--
-        <nav class="navbar navbar-light bg-light">
-        <img
-          src="https://cdn.glitch.com/d055f014-bb8e-417c-99ac-41aa61652365%2Flogo%20vp.png?v=1584467232730"
-          width="100"
-          height="10"
-          class="d-inline-block align-top"
-          alt=""
-        />
-        <ul class="nav">
-          <div class="glitchButton" style="position:top"></div>
-          <script src="https://button.glitch.me/button.js"></script>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contenido.html">Contenido</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="acercade.html">Acerca de</a>
-          </li>
-        </ul>
-      </nav>
-      -->
       
       <div
         class="cover d-flex justify-content-center align-items-center flex-column">
@@ -68,8 +46,5 @@
           </a>
       </div>
     </header>
-    
-    
-    
   </body>
 </html>
