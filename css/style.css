@@ -55,6 +55,9 @@ body{
   overflow: hidden;
   border-bottom:solid 1px grey;
 }
+li{
+  color: white;
+}
 .cardOscuro{
   
   border: 0 !important;

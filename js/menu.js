@@ -24,16 +24,7 @@ var e9 = '<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto
 var botonDark = '<li class="nav-item"> <button type="button" class="btn btn-dark switch" id="switch" onclick=cambiarModoOscuro()>Modo Oscuro</button></li>';
 var e11 = '</ul></nav>';
 navigation.push(e1+e2+e3+e4+e5+e6+e7+e8+e9+botonDark+e11);
-// navigation.push(e2);
-// navigation.push(e3);
-// navigation.push(e4);
-// navigation.push(e5);
-// navigation.push(e6);
-// navigation.push(e7);
-// navigation.push(e8);
-// navigation.push(e9);
-// navigation.push(e10);
-// navigation.push(e11);
+
 function cambiarModoOscuro() { 
     var cuerpoweb = document.body; 
     var nav = document.querySelector(".navbar");
